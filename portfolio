@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="dating.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        /* Add some CSS to style the modal */
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <h1 class="logo">portf<span class="logo2">olio</span></h1>
+            <ul class="nav-links">
+                <li id="nav-links"><a href="#HOME"> HOME</a></li>
+                <li class><a href="#ABOUT"> ABOUT</a></li>
+                <li class id="CONTACT US"><a href="#contact us">CONTACT US</a></li>
+            </ul>
+            <button class="DEED" onclick="openPopup()">Donate now</button>
+            <div class="popup" id="popup">
+                   <H1>PALMPAY ACCOUNT NO</H1>
+                   <H2>8131935089 OPAY/PALMPAY</H2>
+                   <H3>FOR BITCOIN DONATION </H3>
+                <h2>THANK YOU</h2>
+                <button type="button" onclick="closePopup()">OKAY</button>
+            </div>
+        </nav>
+    </header>
+    <div class="pics"> 
+        <p></p>
+        <button class="btc" id="btc-btn">Watch a summary video of  my website</button>
+    </div>
+
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-btn">&times;</span>
+            <video src="invideo-ai-1080 Oliyide Ayomide's Web Dev Portfolio in 6 2024-09-23.mp4" controls id="video" height="20%" width="50%"></video>
+        </div>
+    </div>
+
+    <div class="ABOUT" id="ABOUT">
+        <H1>ABOUT US</H1>
+        <h2>Ayomide Oliyide Samson</h2>
+        <p>
+            Hi, I'm Oliyide Ayomide, a web developer with a passion for crafting innovative digital experiences. <br>
+             With a keen eye for detail and a love for problem-solving, I thrive in the fast-paced world of web development. <br>
+             When I'm not coding, you can find me exploring new technologies, attending industry events, or contributing to open-source projects. Let's build something amazing together!" 
+        </p>
+        <br>
+      <h1> Technical Skills:</h1> 
+
+ <p>Programming languages: JavaScript, HTML, CSS, TypeScript <br>
+Frameworks: React, Angular, Vue.js <br>
+Libraries: jQuery, Lodash <br>
+Databases: MySQL, MongoDB, PostgreSQL <br>
+Operating Systems: Windows, macOS, Linux <br>
+Agile methodologies: Scrum, Kanban <br>
+Version control: Git, SVN <br>
+</p>
+<h1>Personal Projects:</h1>
+
+<p>E-commerce Website: Built a responsive e-commerce <br>
+     website using React, Redux, and Node.js <br>
+Single-Page Application: Developed a fast and interactive single-page application using Angular,<br>
+TypeScript, and Webpack <br>
+Responsive Website Redesign: Redesigned a website for a non-profit organization, <br>
+increasing mobile traffic by 50% and improving overall user </p>
+        <p class="sgg">
+         
+<h1>Contact Information</h1> <br>
+Email: Oliyideayimide05@gmail.com <br>
+Phone: +2348131935089 <br>
+LinkedIn: linkedin.com/in/oliyideayomide <br>
+GitHub: github.com/oliyideayomide <br>
+        </p>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+        let modal = document.getElementById("myModal");
+        let video = document.getElementById("video");
+        let btcBtn = document.getElementById("btc-btn");
+        let closeBtn = document.getElementById("close-btn");
+
+        btcBtn.addEventListener("click", function() {
+            modal.style.display = "block";
+            video.play();
+        });
+
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+            video.pause();
+        });
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+    </script>
+</body>
+</html>
